@@ -2,7 +2,6 @@
   "name": "tether-crypto-currency",
   "version": "1.0.0",
   "description": "Simple crypto currency data gathering solution using Hyperswarm RPC and Hypercores.",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,5 +11,14 @@
     "node"
   ],
   "author": "yergaliyev.production@gmail.com",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@hyperswarm/rpc": "^3.3.2",
+    "hyperbee": "^2.20.7",
+    "hypercore": "^10.38.1",
+    "hyperdht": "^6.20.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
 }

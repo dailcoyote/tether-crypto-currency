@@ -24,3 +24,7 @@ logs
 
 # Environment variables
 .env*
+
+# rpc files
+db/
+rpcserver.pub
