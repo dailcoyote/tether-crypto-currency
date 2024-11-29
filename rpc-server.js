@@ -22,14 +22,13 @@ const main = async () => {
     process.env.COINGECKO_API_KEY = fs.readFileSync("keys/coingecko.key").toString('utf8');
     
     console.log('rpc server started listening on public key:', pubKey.toString('hex'), pubKey);
-    console.log("API Key from CoinGecko Crypo Tracker", process.env.COINGECKO_API_KEY)
-
-    // Processing
-    bus.scanCryptoExchange();
+    console.log("API Key from CoinGecko Crypo Tracker:", process.env.COINGECKO_API_KEY)
 
     // bind handlers to rpc server
     rpcServer.respond('getLatestPrices', bus.getLatestPrices.bind(bus))
 
+    // Cron Job
+    bus.exchangeSchedule()
 }
 
 main().catch(console.error)
