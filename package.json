@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Simple crypto currency data gathering solution using Hyperswarm RPC and Hypercores.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:server": "node rpc-server",
+    "start:client": "node rpc-client"
   },
   "keywords": [
     "tether",
